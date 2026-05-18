@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #1a1a1a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#info {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #ffffff;
+    background: rgba(15, 15, 15, 0.9);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333;
+    width: 320px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+#info h1 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    color: #4facfe;
+}
+#info p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+#draw-container {
+    margin-top: 15px;
+    text-align: center;
+}
+canvas#drawCanvas {
+    background-color: #2a2a2a;
+    border: 2px solid #555;
+    border-left: 4px dashed #4facfe; /* Representa el eje de revolución */
+    cursor: crosshair;
+    border-radius: 4px;
+    touch-action: none; /* Previene scroll en táctil */
+}
+.help-text {
+    font-size: 12px !important;
+    color: #4facfe !important;
+    margin-top: 5px !important;
+    margin-bottom: 10px !important;
+}
+button#clearBtn {
+    background: #4facfe;
+    border: none;
+    padding: 8px 16px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+button#clearBtn:hover {
+    background: #3a8ebd;
+}
+textarea#dataEditor {
+    width: 100%;
+    box-sizing: border-box;
+    background: #222;
+    color: #c2edfc;
+    border: 1px solid #555;
+    border-radius: 4px;
+    padding: 8px;
+    font-family: monospace;
+    font-size: 11px;
+    resize: vertical;
+    margin-bottom: 5px;
+}
+.btn-group {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+.btn-group button {
+    flex: 1;
+    background: #4facfe;
+    border: none;
+    padding: 8px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.btn-group button.export-btn {
+    background: #388c46;
+}
+.btn-group button:hover {
+    opacity: 0.8;
+}

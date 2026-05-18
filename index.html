@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copa Interactiva 3D - Cálculo Integral</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importamos Three.js y dependencias desde un CDN -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="info">
+        <h1>Dibujo a 3D (Revolución)</h1>
+        <p>Dibuja un perfil o usa ecuaciones paramétricas.</p>
+        <p class="help-text">La línea punteada azul es el EJE Y (Centro).</p>
+        
+        <div id="draw-container">
+            <!-- Lienzo de 300x400 pixeles -->
+            <canvas id="drawCanvas" width="300" height="400"></canvas>
+            <button id="clearBtn">Limpiar / Nuevo</button>
+        </div>
+        
+        <hr style="border-color:#333; margin: 15px 0;">
+        
+        <h3 style="margin:0 0 5px 0; font-size:14px; color:#4facfe;">Ecuaciones / Datos Live</h3>
+        <textarea id="dataEditor" rows="6">// Ecuación paramétrica de ejemplo
+let pts = [];
+for(let y = 0; y <= 400; y += 5) {
+    // Modifica esta ecuación matemática:
+    let x = 40 + 30 * Math.sin(y / 40);
+    pts.push({ x: x, y: y });
+}
+return pts;</textarea>
+        <div class="btn-group">
+            <button id="btnApply">Aplicar Código</button>
+        </div>
+        <div class="btn-group">
+            <button id="btnImportEq">Importar</button>
+            <button id="btnExportEq">Exp. Código</button>
+            <button id="btnExportJSON">Exp. JSON</button>
+        </div>
+
+        <hr style="border-color:#333; margin: 15px 0;">
+        
+        <h3 style="margin:0 0 5px 0; font-size:14px; color:#4facfe;">Exportar Sólido 3D</h3>
+        <div class="btn-group">
+            <button id="btnExportSTL" class="export-btn">Exportar STL</button>
+            <button id="btnExportOBJ" class="export-btn">Exportar OBJ</button>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
