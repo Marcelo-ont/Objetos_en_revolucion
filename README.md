@@ -25,4 +25,4 @@ Aplicación web interactiva que te permite dibujar un perfil a mano alzada o uti
    git branch -M main
    git push -u origin main
    ```
-4. Ve a la configuración de tu repositorio en GitHub > **Pages** > **Build and deployment** y selecciona la rama `main` en la carpeta `/ (root)` y haz clic en **Save**. ¡En un par de minutos tu sitio web estará público!
+4. Ve a la configuración de tu repositorio en GitHub > **Pages** > **Build and deployment** y selecciona la rama `main` en la carpeta `/ (root)` y haz clic en **Save**. ¡En un par de minutos tu sitio web estará público!# Objetos_en_revolucion
